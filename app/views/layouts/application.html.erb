@@ -5,10 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <!-- let sadd bootstrap -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 
+<!-- "yield" is a standin for whatever .erb file we push in -->
 <%= yield %>
+
 
 </body>
 </html>
