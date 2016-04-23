@@ -14,9 +14,9 @@
     <div class="row nav">
       <div class="col-md-offset-2 col-md-8">
         <div class="btn-group btn-group-justified" role="group" aria-label="...">
-          <a href="/play/rock" class="btn btn-default" role="button">Play Rock</a>
-          <a href="/play/paper" class="btn btn-default" role="button">Play Paper</a>
-          <a href="/play/scissors" class="btn btn-default" role="button">Play Scissors</a>
+          <a href="/play/rock" class="btn btn-primary" role="button">Play Rock</a>
+          <a href="/play/paper" class="btn btn-info" role="button">Play Paper</a>
+          <a href="/play/scissors" class="btn btn-primary" role="button">Play Scissors</a>
         </div>
       </div>
     </div>
@@ -27,17 +27,33 @@
     </div>
     <div class="row moves">
       <div class="col-md-offset-2 col-md-4">
-        <h2>Paper</h2>
-        <img class="img-responsive" src="\assets\images\paper.png">
+        <div class="panel panel-success">
+          <div class="panel-heading text-center">
+            <h3 class="panel-title">Paper</h3>
+          </div>
+          <div class="panel-body">
+            <img class="img-responsive" src="\assets\images\paper.png">
+          </div>
+        </div>
       </div>
       <div class="col-md-4">
-        <h2><%=@computer_move_format%></h2>
-        <img class="img-responsive" src="\assets\images\"+<%=@computer_move%>+".png">
+        <div class="panel panel-danger">
+          <div class="panel-heading text-center">
+            <h3 class="panel-title"><%=@computer_move_format%></h3>
+          </div>
+          <div class="panel-body computer">
+            <img class="img-responsive" src=<%=@computer_move_image%>>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row result">
       <div class="col-md-offset-4 col-md-4 text-center">
-        <h2>You <%=@result%>!</h2>
+        <h2>
+          <span class="label <%=@span%>">
+            You <%=@result%>!
+          </span>
+        </h2>
       </div>
     </div>
   </div>
