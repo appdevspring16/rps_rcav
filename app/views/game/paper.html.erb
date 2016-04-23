@@ -1,0 +1,44 @@
+
+<body>
+  <div class="container">
+    <div class="row header">
+      <div class="col-md-offset-1 col-md-10 text-center">
+        <h1>Rock, Paper, Scissors</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class = "col-md-offset-1 col-md-10">
+        <hr>
+      </div>
+    </div>
+    <div class="row nav">
+      <div class="col-md-offset-2 col-md-8">
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <a href="/play/rock" class="btn btn-default" role="button">Play Rock</a>
+          <a href="/play/paper" class="btn btn-default" role="button">Play Paper</a>
+          <a href="/play/scissors" class="btn btn-default" role="button">Play Scissors</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class = "col-md-offset-1 col-md-10">
+        <hr>
+      </div>
+    </div>
+    <div class="row moves">
+      <div class="col-md-offset-2 col-md-4">
+        <h2>Paper</h2>
+        <img class="img-responsive" src="\assets\images\paper.png">
+      </div>
+      <div class="col-md-4">
+        <h2><%=@computer_move_format%></h2>
+        <img class="img-responsive" src="\assets\images\"+<%=@computer_move%>+".png">
+      </div>
+    </div>
+    <div class="row result">
+      <div class="col-md-offset-4 col-md-4 text-center">
+        <h2>You <%=@result%>!</h2>
+      </div>
+    </div>
+  </div>
+</body>
