@@ -15,10 +15,11 @@
   <div class="container">
 
     <div class="row"> <!-- Page borders -->
-      <div class="col-md-offset-2 col-md-8">
+      <div>
 
+        <hr>
         <div class="row"> <!-- Play buttons -->
-          <div class="col-md-offset-3 col-md-6">
+          <div class="col-md-offset-2 col-md-8">
 
             <div class="btn-group btn-group-justified">
               <div class="btn-group">
@@ -34,22 +35,23 @@
 
           </div>
         </div>
+        <hr>
 
         <div class="row"> <!-- Picture row -->
-          <div class="col-md-offset-3 col-md-3">  <!-- Player choice -->
+          <div class="col-md-offset-2 col-md-4">  <!-- Player choice -->
             <div class="panel panel-success">
               <div class="panel-heading">
-                <h3 class="panel-title">Paper</h3>
+                <h3 class="panel-title text-center">Paper</h3>
               </div>
               <div class="panel-body">
                 <img class="img-responsive" src="/assets/images/paper.png" />
               </div>
             </div>
           </div>
-          <div class="col-md-3"> <!-- Computer choice -->
+          <div class="col-md-4"> <!-- Computer choice -->
             <div class="panel panel-danger">
               <div class="panel-heading">
-                <h3 class="panel-title"><%= @computer_move.capitalize %></h3>
+                <h3 class="panel-title text-center"><%= @computer_move.capitalize %></h3>
               </div>
               <div class="panel-body">
                 <img class="img-responsive" src="/assets/images/<%= @computer_move %>.png" />
@@ -58,14 +60,14 @@
 
           </div>
         </div>
+      </div>
 
-        <div class="row"> <!-- Result row -->
-          <div class="col-md-offset-2 col-md-8">
-            <div class="well text-center">
-              <span class="label label-warning">
-                <%= @result %>
-              </span>
-            </div>
+      <div class="row"> <!-- Result row -->
+        <div class="col-md-12">
+          <div class="well well-lg text-center">
+            <h1><span class="label label-warning">
+              <%= @result %>
+            </span></h1>
           </div>
         </div>
       </div>
