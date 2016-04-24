@@ -16,4 +16,34 @@
     </div>
   </div>
   <hr>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          Paper
+        </div>
+        <div class="panel-body">
+          <img src="/assets/images/paper.png" class="img-responsive">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <%= @computer_move.capitalize %>
+        </div>
+        <div class="panel-body">
+          <% if @computer_move == "rock" %>
+            <img src="/assets/images/rock.png" class="img-responsive">
+          <% elsif @computer_move =="paper" %>
+            <img src="/assets/images/paper.png" class="img-responsive">
+          <% else %>
+            <img src="/assets/images/scissors.png" class="img-responsive">
+          <% end %>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 </div>
