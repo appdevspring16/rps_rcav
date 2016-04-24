@@ -3,7 +3,7 @@ class GameController < ApplicationController
     @computer_move = ["rock", "paper", "scissors"].sample
 
     if @computer_move == "rock"
-      @result = "Tie"
+      @result = "Tied"
     elsif @computer_move == "paper"
       @result = "Lose"
     else
@@ -17,7 +17,7 @@ class GameController < ApplicationController
     @computer_move = ["rock", "paper", "scissors"].sample
 
     if @computer_move == "paper"
-      @result = "Tie"
+      @result = "Tied"
     elsif @computer_move == "scissors"
       @result = "Lose"
     else
@@ -31,7 +31,7 @@ class GameController < ApplicationController
     @computer_move = ["rock", "paper", "scissors"].sample
 
     if @computer_move == "scissors"
-      @result = "Tie"
+      @result = "Tied"
     elsif @computer_move == "rock"
       @result = "Lose"
     else
