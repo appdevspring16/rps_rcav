@@ -1,0 +1,14 @@
+<h1>Hi, you are at zebra.html.erb</h1>
+
+<h2>The computer move was: <%= @computer_move %></h2>
+
+
+<img src="" alt="" />
+
+<% if @result == "Tie" %>
+<h2>It's like kissing your sister, yuck.</h2>
+<% elsif @result == "Win" %>
+<h2>You are truly the master of the universe</h2>
+<% else %>
+<h2>Sucks to suck, huh.</h2>
+<% end %>
