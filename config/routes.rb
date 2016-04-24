@@ -53,4 +53,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+# get("path for where to go", {:controller=>"", :action => ""}) finds the controller in app/controllers with name_controller.rb
+
+get("/play/rock",{:controller => "game", :action => "rock"})
+get("/play/paper",{:controller => "game", :action => "paper"})
+get("/play/scissors",{:controller => "game", :action => "scissors"})
+root :controller => 'game', :action => 'rock'
+
+
 end
