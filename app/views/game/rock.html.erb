@@ -7,9 +7,9 @@
     <div class="btn-group btn-group-justified">
       <a href="http://localhost:3000/play/rock" class="btn btn-block btn-primary">
         Play Rock</a>
-        <a href="play/paper" class="btn btn-block btn-info">
+        <a href="http://localhost:3000/play/paper" class="btn btn-block btn-info">
           Play Paper</a>
-        <a href="play/scissors" class="btn btn-block btn-primary">
+        <a href="http://localhost:3000/play/scissors" class="btn btn-block btn-primary">
           Play Scissors</a>
     </div>
 
@@ -20,7 +20,7 @@
 <hr>
   <div class="row">
     <div class="col-md-4 col-md-offset-2 col-xs-6">
-      <div class="panel panel-success">
+      <div class="panel panel-<%= @user_render%>">
         <div class="panel-heading">
             <h2 class="panel-title text-center"> Rock</h2>
         </div>
@@ -33,9 +33,9 @@
 
 
     <div class="col-md-4 col-xs-6">
-      <div class="panel panel-success">
+      <div class="panel panel-<%= @cpu_render%>">
         <div class="panel-heading">
-            <h2 class="panel-title text-center"> <%= @cpu_move %> </h2>
+            <h2 class="panel-title text-center"> <%= @cpu_text %> </h2>
         </div>
 
         <div class="panel-body">
@@ -50,7 +50,7 @@
       <div class="col-md-12">
         <div class="well text-center">
           <h1>
-            <span class="label label-danger">
+            <span class="label label-<%= @panel_render%>">
               <%= @result %>
             </span>
           </h1>
