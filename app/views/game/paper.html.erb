@@ -32,16 +32,59 @@
           <div class="panel-body">
             <img class="img-responsive" src="http://localhost:3000/assets/images/paper.png">
           </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="well text-center">
-          <h1>You <%= @result %>.</h1>
 
         </div>
       </div>
 
+      <div class="col-md-4">
+        <div class="panel panel-danger">
+
+          <% if @computer_move == "rock" %>
+          <div class="panel-heading text-center">
+            <h3 class="panel-title">Rock</h3>
+          </div>
+          <img class="image img-responsive" src="/assets/images/rock.png"/>
+
+          <% elsif @computer_move == "paper" %>
+          <div class="panel-heading text-center">
+            <h3 class="panel-title">Paper</h3>
+          </div>
+          <img class="image img-responsive" src="/assets/images/paper.png"/>
+
+          <% else %>
+          <div class="panel-heading text-center">
+            <h3 class="panel-title">Scissors</h3>
+          </div>
+          <img class="image img-responsive" src="/assets/images/scissors.png"/>
+          <% end %>
+
+        </div>
+      </div>
+
+    </div><!-- closing row -->
+
+    <div class="row">
+      <div class="col-md-12">
+
+      <div class="well text-center">
+
+        <% if @result == "tied" %>
+        <h1>
+          <span class="label label-warning"> You tied!</span> </h1>
+          <% elsif @result == "won" %>
+          <h1>
+            <span class="label label-success">You won!</span>
+          </h1>
+          <% else %>
+          <h1>
+            <span class="label label-danger">You lost!</span>
+          </h1>
+          <% end %>
+
+        </div>
+      </div>
     </div>
-    </body>
-    </html>
+
+  </div><!--container closing -->
+</body>
+</html>
