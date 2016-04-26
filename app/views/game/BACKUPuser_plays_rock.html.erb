@@ -1,3 +1,26 @@
+<h1>welcome</h1>
+
+<!-- <img src="/assets/images/rock.png" alt="" /> -->
+<!-- <img src="./assets/images/docs-anywhere.png" class="img-responsive"> -->
+<img src="/assets/images/rock.png" class="img-responsive">
+
+
+<h2>The computer move was: <%= @computer_move %> </h2>
+<!-- <h2>The result is You: <%= @result %> </h2> -->
+
+<% if @result == "Tie"  %>
+<h2>you tied</h2>
+<% elsif @result == "Win"  %>
+<h2>congrats</h2>
+<% else  %>
+<h2>you lost</h2>
+
+<% end %>
+
+
+
+
+
 <div class="container">
   <hr>
 
@@ -26,11 +49,11 @@
     <div class="panel panel-success">
       <div class="panel-heading">
         <h2 class="panel-title text-center">
-          Rock
+          Paper
         </h2>
       </div>
       <div class="panel-body">
-        <img class="img-responsive" src="/assets/images/rock.png">
+        <img class="img-responsive" src="/assets/images/paper.png">
       </div>
     </div>
   </div>
@@ -39,7 +62,7 @@
     <div class="panel panel-danger">
       <div class="panel-heading">
         <h2 class="panel-title text-center">
-          <%= @computer_move %>
+          Rock
         </h2>
       </div>
       <div class="panel-body">
@@ -54,7 +77,7 @@
     <div class="well text-center">
       <h1>
 
-        <%= @label %>
+        <span class="label label-success">
           You won!
         </span>
       </h1>
