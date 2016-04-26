@@ -34,23 +34,33 @@
         </div>
         <div class="panel-body">
           <% if @computer_move == "rock" %>
-            <img src="/assets/images/rock.png" class="img-responsive">
+          <img src="/assets/images/rock.png" class="img-responsive">
           <% elsif @computer_move =="paper" %>
-            <img src="/assets/images/paper.png" class="img-responsive">
+          <img src="/assets/images/paper.png" class="img-responsive">
           <% else %>
-            <img src="/assets/images/scissors.png" class="img-responsive">
+          <img src="/assets/images/scissors.png" class="img-responsive">
           <% end %>
         </div>
-        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="well text-center">
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="well text-center">
+        <% if @result == "Win" %>
+        <span class="label label-success">
           You <%= @result.downcase %>!
-        </div>
+        </span>
+        <% elsif @result == "Lose" %>
+        <span class="label label-danger">
+          You <%= @result.downcase %>!
+        </span>
+        <% else %>
+        <span class="label label-warning">
+          You <%= @result.downcase %>!
+        </span>
+        <% end %>
       </div>
     </div>
-</div>
-
+  </div>
 </div>

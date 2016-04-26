@@ -48,8 +48,20 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="well text-center">
-        You <%= @result.downcase %>! 
+        <% if @result == "Win" %>
+        <span class="label label-success">
+          You <%= @result.downcase %>!
+        </span>
+        <% elsif @result == "Lose" %>
+        <span class="label label-danger">
+          You <%= @result.downcase %>!
+        </span>
+        <% else %>
+        <span class="label label-warning">
+          You <%= @result.downcase %>!
+        </span>
+        <% end %>
       </div>
     </div>
-</div>
+  </div>
 </div>
