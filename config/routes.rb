@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'game#rock'
+
   get("/play/rock", {:controller => "game", :action => "rock"})
 
   get("/play/scissors", {:controller => "game", :action => "scissors"})
