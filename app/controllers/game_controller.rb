@@ -5,9 +5,9 @@ class GameController < ApplicationController
     if @computer_move == "rock"
       @result = "Tied"
     elsif @computer_move == "paper"
-      @result = "Lose"
+      @result = "Lost"
     else
-      @result = "Win"
+      @result = "Won"
     end
 
     render("user_plays_rock.html.erb")
@@ -19,9 +19,9 @@ class GameController < ApplicationController
     if @computer_move == "paper"
       @result = "Tied"
     elsif @computer_move == "scissors"
-      @result = "Lose"
+      @result = "Lost"
     else
-      @result = "Win"
+      @result = "Won"
     end
 
     render("user_plays_paper.html.erb")
@@ -33,9 +33,9 @@ class GameController < ApplicationController
     if @computer_move == "scissors"
       @result = "Tied"
     elsif @computer_move == "rock"
-      @result = "Lose"
+      @result = "Lost"
     else
-      @result = "Win"
+      @result = "Won"
     end
 
     render("user_plays_scissors.html.erb")

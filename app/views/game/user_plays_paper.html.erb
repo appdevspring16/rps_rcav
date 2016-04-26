@@ -48,19 +48,21 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="well text-center">
-        <% if @result == "Win" %>
-        <span class="label label-success">
-          You <%= @result.downcase %>!
-        </span>
-        <% elsif @result == "Lose" %>
-        <span class="label label-danger">
-          You <%= @result.downcase %>!
-        </span>
-        <% else %>
-        <span class="label label-warning">
-          You <%= @result.downcase %>!
-        </span>
-        <% end %>
+        <h1>
+          <% if @result == "Won" %>
+          <span class="label label-success">
+            You <%= @result.downcase %>!
+          </span>
+          <% elsif @result == "Lost" %>
+          <span class="label label-danger">
+            You <%= @result.downcase %>!
+          </span>
+          <% else %>
+          <span class="label label-warning">
+            You <%= @result.downcase %>!
+          </span>
+          <% end %>
+        </h1>
       </div>
     </div>
   </div>
