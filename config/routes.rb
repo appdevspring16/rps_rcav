@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 # whatever you call controller has to match the file name you create in the
 # controller folder
 
+  get("/", { :controller => "game", :action => "rock"})
+
   get("play/rock", { :controller =>"game", :action=>"rock"})
 
   get("play/paper", { :controller =>"game", :action=>"paper"})
