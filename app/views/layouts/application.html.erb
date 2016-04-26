@@ -5,8 +5,42 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 </head>
 <body>
+<!-- yield says that every page that the server sevres up gets inserted into the yield field -->
+<!-- So if you wanted to load bootstrap into every single html page, you would add it in here -->
+
+<!-- You could also add a footer, header, navbar, etc., basically anything you want to have added to every single page by putting it in here -->
+
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-group btn-group-justified">
+        <a href="/rock" class="btn btn-block btn-primary">
+            Play Rock
+        </a>
+        <a href="/paper" class="btn btn-block btn-primary">
+            Play Paper
+        </a>
+        <a href="/scissors" class="btn btn-block btn-primary">
+            Play scissors
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <%= yield %>
 

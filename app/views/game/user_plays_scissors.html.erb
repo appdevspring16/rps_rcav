@@ -1,0 +1,124 @@
+
+<% @computer_move   %>
+
+<% @result %>
+
+<!-- The below runs ruby logic but doesnt print it out -->
+<!-- The equals sign in the ruby code  above spits it out in the browser, if no equals sign it does not spit it out like below -->
+<%  if @result == "Tie" %>
+
+<hr>
+<div class="row">
+  <div class="col-md-4 col-md-offset-2 col-xs-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">Scissors</h2>
+      </div>
+    <div class="panel-body">
+      <img class="img-responsive" src="/assets/images/scissors.png" alt="" />
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-xs-6">
+    <div class="panel-danger">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">Scissors</h2>
+      </div>
+  <div class="panel-body">
+    <img class="img-responsive" src="/assets/images/scissors.png" alt="" />
+  </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="well text-center">
+      <h1>
+        <span class="label label-danger">You tied!</span>
+      </h1>
+    </div>
+  </div>
+</div>
+</div>
+
+<% elsif @result == "Win"  %>
+
+<hr>
+<div class="row">
+  <div class="col-md-4 col-md-offset-2 col-xs-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">Scissors</h2>
+      </div>
+    <div class="panel-body">
+      <img class="img-responsive" src="/assets/images/scissors.png" alt="" />
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-xs-6">
+    <div class="panel-danger">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">Paper</h2>
+      </div>
+  <div class="panel-body">
+    <img class="img-responsive" src="/assets/images/paper.png" alt="" />
+  </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="well text-center">
+      <h1>
+        <span class="label label-danger">You won!</span>
+      </h1>
+    </div>
+  </div>
+</div>
+</div>
+
+<%else%>
+
+<hr>
+<div class="row">
+  <div class="col-md-4 col-md-offset-2 col-xs-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">Scissors</h2>
+      </div>
+    <div class="panel-body">
+      <img class="img-responsive" src="/assets/images/scissors.png" alt="" />
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-xs-6">
+    <div class="panel-danger">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">Rock</h2>
+      </div>
+  <div class="panel-body">
+    <img class="img-responsive" src="/assets/images/rock.png" alt="" />
+  </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="well text-center">
+      <h1>
+        <span class="label label-danger">You lost!</span>
+      </h1>
+    </div>
+  </div>
+</div>
+</div>
+
+<% end %>
