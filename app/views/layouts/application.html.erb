@@ -6,19 +6,20 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/additional_styles.css">
 </head>
 <body>
 <%= yield %>
 
 <div class="container">
-  <div class="row">
+  <div class="row margin-above-top-md margin-below-bottom-md">
     <div class="col-md-8 col-md-offset-2 col-xs-12">
       <div class="btn-group btn-group-justified">
         <a href="/play/rock" class="btn btn-block btn-primary">
           Play Rock
         </a>
 
-        <a href="/play/paper" class="btn btn-block btn-primary">
+        <a href="/play/paper" class="btn btn-block btn-info">
           Play Paper
         </a>
 
