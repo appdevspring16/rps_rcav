@@ -53,4 +53,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get("/play/rock", { :controller => "game", :action => "rock"})
+
+  get("/play/paper", { :controller => "game", :action => "paper"})
+
+  get("/play/scissors", { :controller => "game", :action => "scissors"})
 end
