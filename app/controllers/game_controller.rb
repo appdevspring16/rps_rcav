@@ -6,6 +6,8 @@ class GameController < ApplicationController
     if @computer_move == "rock"
       @result = "tie!"
 
+    
+
     elsif @computer_move == "paper"
       @result = "lose!"
 
