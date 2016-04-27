@@ -1,0 +1,19 @@
+<img class="img-responsive" src="/assets/images/paper.png" />
+<!-- <h2>The computer move was: <%= @computer_move %></h2>
+<h2>The result is you: <%= @result %> </h2> -->
+
+<% if @computer_move == "rock" %>
+<img class="img-responsive" src="/assets/images/rock.png" />
+<% elsif @computer_move == "paper" %>
+<img class="img-responsive" src="/assets/images/paper.png" />
+<% else %>
+<img class="img-responsive" src="/assets/images/scissors.png" />
+<% end %>
+
+<% if @result == "Tie" %>
+<h2>:(, we Tied!)</h2>
+<% elsif @result == "Win" %>
+<h2>You won!</h2>
+<% else %>
+<h2>You lost!</h2>
+<% end %>
