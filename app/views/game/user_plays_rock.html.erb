@@ -1,0 +1,68 @@
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <a class = "btn btn-primary" href="/rock"> Play Rock</a>
+        </div>
+        <div class="btn-group" role="group">
+          <a class="btn btn-info" href="/paper">Play Paper</a>
+        </div>
+        <div class="btn-group" role="group">
+          <a class="btn btn-primary" href="/scissors">Play Scissors</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          Rock
+        </div>
+        <div class="panel-body">
+          <img src="/assets/images/rock.png" class="img-responsive">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <%= @computer_move.capitalize %>
+        </div>
+        <div class="panel-body">
+          <% if @computer_move == "rock" %>
+          <img src="/assets/images/rock.png" class="img-responsive">
+          <% elsif @computer_move =="paper" %>
+          <img src="/assets/images/paper.png" class="img-responsive">
+          <% else %>
+          <img src="/assets/images/scissors.png" class="img-responsive">
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="well text-center">
+        <h1>
+          <% if @result == "Won" %>
+          <span class="label label-success">
+            You <%= @result.downcase %>!
+          </span>
+          <% elsif @result == "Lost" %>
+          <span class="label label-danger">
+            You <%= @result.downcase %>!
+          </span>
+          <% else %>
+          <span class="label label-warning">
+            You <%= @result.downcase %>!
+          </span>
+          <% end %>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
