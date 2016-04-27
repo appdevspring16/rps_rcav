@@ -20,19 +20,17 @@
           <img class="img-responsive" src="/assets/images/rock.png" />
         </div>
       </div>
-
     </div>
     <div class="col-md-4">
       <div class="panel panel-danger">
         <div class="panel-heading">
           <% if @computer_move == "rock" %>
-        <h3 class="panel-title text-center">Rock</h3>
+          <h3 class="panel-title text-center">Rock</h3>
           <% elsif @computer_move == "paper" %>
           <h3 class="panel-title text-center">Paper</h3>
           <% else %>
           <h3 class="panel-title text-center">Scissors</h3>
           <% end %>
-
         </div>
         <div class="panel-body">
           <% if @computer_move == "rock" %>
@@ -43,12 +41,10 @@
           <img class="img-responsive" src="/assets/images/scissors.png" />
           <% end %>
         </div>
-
       </div>
     </div>
     <div class="row">
       <div class="col-md-offset-2 col-md-8">
-
         <% if @result == "Tie" %>
         <div class="well text-center">
           <h1><span class="label label-warning">You tied!</span></h1>
@@ -59,7 +55,7 @@
         </div>
         <% else %>
         <div class="well text-center">
-        <h1><span class="label label-danger">You lost!</span></h1>
+          <h1><span class="label label-danger">You lost!</span></h1>
         </div>
         <% end %>
       </div>
