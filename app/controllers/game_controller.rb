@@ -1,8 +1,5 @@
 class GameController < ApplicationController
 
-  def welcome
-    render("welcome.html.erb")
-  end
 
 # can add all our code that we did in here for RPS... make a nice website... then copy them for scissors and paper
   def rock
@@ -24,7 +21,7 @@ class GameController < ApplicationController
     @label_color = "label-success"
     end
 
-    render("rock.html.erb")
+    render("rps.html.erb")
 
   end
 
@@ -47,7 +44,7 @@ class GameController < ApplicationController
     @label_color = "label-success"
     end
 
-    render("rock.html.erb")
+    render("rps.html.erb")
 
   end
 
@@ -70,7 +67,7 @@ class GameController < ApplicationController
     @label_color = "label-success"
     end
 
-    render("rock.html.erb")
+    render("rps.html.erb")
 
   end
 
