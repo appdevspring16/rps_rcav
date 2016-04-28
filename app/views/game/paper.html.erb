@@ -47,9 +47,18 @@
           </div>
 
         <div class="col-md-4">
-          <p>
-            The computer played <%= @computer_move %>
-          </p>
+
+          <div class="panel panel-danger">
+                <div class="panel-heading">
+                  <h2 class="panel-title text-center">
+                    <%= @computer_move %>
+                  </h2>
+                </div>
+                <div class="panel-body">
+                  <img class="img-responsive" src = "<%= @computer_image %>">
+                </div>
+              </div>
+
         </div>
     </div>
     <div class="row">
