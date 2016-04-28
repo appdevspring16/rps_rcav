@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body class="padding-inside-top-md">
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-2">
+          <a href="http://localhost:3000/rock/"</a>
+          <button type="button" class="btn btn-primary btn-md btn-block active">Play Rock</button>
+        </div>
+        <div class="col-sm-offset-0 col-sm-2">
+            <a href="http://localhost:3000/paper/"</a>
+              <button type="button" class="btn btn-primary btn-md btn-block active">Play Paper </button>
+
+        </div>
+        <div class="col-sm-offset-0 col-sm-2">
+<a href="http://localhost:3000/scissors/"</a>
+          <button type="button" class="btn btn-primary btn-md btn-block active">Play Scissors</button>
+        </div>
+    </div>
+        <hr>
+
+    <div class="row padding-inside-top-sm">
+        <div class="col-sm-offset-3 col-sm-3 img-user">
+          <p><span class= "user-caption">Scissors</span></p>
+          <img src="/assets/images/scissors.png" class="img-responsive padding-inside-bottom-xs">
+        </div>
+        <div class="col-sm-offset-0 col-sm-3 img-computer">
+          <p><span class="computer-caption"><%= @computer_move.capitalize %></span></p>
+          <img src= "<%= @image %>" class = "img-responsive padding-inside-bottom-xs">
+        </div>
+    </div>
+
+    <div class="row padding-inside-top-md">
+        <div class="col-sm-12 text-center bottom-cell">
+          <h2> You <%= @result %>!</h2>
+          </div>
+        </div>
+    </div>
+      </div>
+
+</body>
+</html>
