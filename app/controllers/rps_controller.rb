@@ -6,11 +6,11 @@ class RpsController < ApplicationController
   end
 
   def rock
-    @computer = ["rock","paper","scissors"][rand(3)]
-    @player = "rock"
+    @computer = ["Rock","Paper","Scissors"].sample
+    @player = "Rock"
     if @computer == @player
       @result = "You tied!"
-    elsif @computer == "paper"
+    elsif @computer == "Paper"
       @result = "You lost!"
     else
       @result = "You won!"
@@ -19,11 +19,11 @@ class RpsController < ApplicationController
   end
 
   def paper
-    @computer = ["rock","paper","scissors"].sample
-    @player = "paper"
+    @computer = ["Rock","Paper","Scissors"].sample
+    @player = "Paper"
     if @computer == @player
       @result = "You tied!"
-    elsif @computer == "scissors"
+    elsif @computer == "Scissors"
       @result = "You lost!"
     else
       @result = "You won!"
@@ -32,11 +32,11 @@ class RpsController < ApplicationController
   end
 
   def scissors
-    @computer = ["rock","paper","scissors"].sample
-    @player = "scissors"
+    @computer = ["Rock","Paper","Scissors"].sample
+    @player = "Scissors"
     if @computer == @player
       @result = "You tied!"
-    elsif @computer == "rock"
+    elsif @computer == "Rock"
       @result = "You lost!"
     else
       @result = "You won!"
