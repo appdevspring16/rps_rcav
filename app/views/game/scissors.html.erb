@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<!-- Connect to Bootstrap CSS -->
+<link rel="stylesheet" href="assets/stylesheet/bootstrap.css">
+
+<!-- Connect to our own additional CSS -->
+<link rel="stylesheet" href="assets/application.css">
+
+<!-- These meta tags make Bootstrap responsive and more accessible -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Connect to Google Web Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+<!-- Display Logic -->
+<div class="container">
+    <hr>
+    <div class="row padding-inside-top-xs padding-inside-bottom-xs">
+        <div class="col-md-offset-2 col-md-8">
+
+          <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+              <a href="/rock" class="btn btn-primary">
+                        Play Rock
+                      </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/paper" class="btn btn-info">
+                        Play Paper
+                      </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/scissors" class="btn btn-primary">
+                        Play Scissors
+                      </a>
+            </div>
+          </div>
+
+        </div>
+    </div>
+      <hr>
+    <div class="row">
+      <div class="col-md-offset-2 col-md-4">
+        <div class="panel panel-success">
+        <div class="panel-heading">
+        <h2 class="panel-title text-center">
+        Scissors
+        </h2>
+        </div>
+        <div class="panel-body">
+        <img class="img-responsive" src="assets/images/scissors.png">
+        </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+
+          <div class="panel panel-danger">
+                <div class="panel-heading">
+                  <h2 class="panel-title text-center">
+                    <%= @computer_move %>
+                  </h2>
+                </div>
+                <div class="panel-body">
+                  <img class="img-responsive" src = "<%= @computer_image %>">
+                </div>
+              </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+
+          <div class="well text-center">
+                <h1>
+                  <span class="label <%= @result_label %>">
+                    You <%= @result %>
+                  </span>
+                </h1>
+              </div>
+
+        </div>
+    </div>
+</div>
+</html>
