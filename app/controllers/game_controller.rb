@@ -8,6 +8,7 @@ class GameController < ApplicationController
   def rock
   @computer_move = ["rock", "paper", "scissors"].sample.downcase
   @user_move = "rock"
+  @user_picture = "/assets/images/#{@user_move.downcase}.png"
 
     if @user_move == @computer_move
     @result = "tie"
@@ -27,6 +28,7 @@ class GameController < ApplicationController
   def paper
   @computer_move = ["rock", "paper", "scissors"].sample.downcase
   @user_move = "paper"
+  @user_picture = "/assets/images/#{@user_move.downcase}.png"
 
     if @user_move == @computer_move
     @result = "tie"
@@ -46,6 +48,7 @@ class GameController < ApplicationController
   def scissors
   @computer_move = ["rock", "paper", "scissors"].sample.downcase
   @user_move = "scissors"
+  @user_picture = "/assets/images/#{@user_move.downcase}.png"
 
     if @user_move == @computer_move
     @result = "tie"
