@@ -15,7 +15,7 @@
 
 <!-- Display Logic -->
 <div class="container">
-    <div class="row">
+    <div class="row padding-inside-top-md padding-inside-bottom-md">
         <div class="col-md-offset-2 col-md-8">
 
           <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -34,8 +34,18 @@
     </div>
     <div class="row">
         <div class="col-md-offset-2 col-md-4">
-          <p>You played paper</p>
-        </div>
+          <div class="panel panel-success">
+          <div class="panel-heading">
+          <h2 class="panel-title text-center">
+          Paper
+          </h2>
+          </div>
+          <div class="panel-body">
+          <img class="img-responsive" src="assets/images/paper.png">
+          </div>
+          </div>
+          </div>
+
         <div class="col-md-4">
           <p>
             The computer played <%= @computer_move %>

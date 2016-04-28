@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="assets/stylesheet/bootstrap.css">
 
 <!-- Connect to our own additional CSS -->
-<link rel="stylesheet" href="assets/application.css">
+<link rel="stylesheet" href="assets/stylesheet/application.css">
 
 <!-- These meta tags make Bootstrap responsive and more accessible -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
 
 <!-- Display Logic -->
 <div class="container">
-    <div class="row">
+    <div class="row padding-inside-top-md padding-inside-bottom-md">
         <div class="col-md-offset-2 col-md-8">
 
           <div class="btn-group btn-group-justified" role="group" aria-label="...">
@@ -34,12 +34,31 @@
     </div>
     <div class="row">
         <div class="col-md-offset-2 col-md-4">
-          <p>You played rock</p>
-        </div>
+          <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          Rock
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="assets/images/rock.png">
+      </div>
+    </div>
+    </div>
+
         <div class="col-md-4">
-          <p>
-            The computer played <%= @computer_move %>
-          </p>
+
+          <div class="panel panel-danger">
+                <div class="panel-heading">
+                  <h2 class="panel-title text-center">
+                    <%= @computer_move %>
+                  </h2>
+                </div>
+                <div class="panel-body">
+                  <img class="img-responsive" src="assets/images/rock.png">
+                </div>
+              </div>
+
         </div>
     </div>
     <div class="row">
