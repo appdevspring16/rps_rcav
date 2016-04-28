@@ -5,10 +5,58 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <!-- Connect to Bootstrap CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Connect to Font Awesome CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Connect to Bootstrap Javascript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<style media="screen">
+body {padding:150px}
+</style>
+<body>
+  <hr>
+  <div class="container">
+    <div class="row play">
+      <div class="col-lg-offset-2 col-lg-8">
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <a class="btn btn-primary" href="http://localhost:3000/rock" role="button">Play Rock</a>
+
+          </div>
+          <div class="btn-group" role="group">
+            <a class="btn btn-info" href="http://localhost:3000/paper" role="button">Play Paper</a>
+
+          </div>
+          <div class="btn-group" role="group">
+            <a class="btn btn-primary" href="http://localhost:3000/scissors" role="button">Play Scissors</a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <hr>
+  <div class="row pic">
+    <div class="col-lg-offset-2 col-lg-4"><%= yield %></div>
+    <div class="col-lg-4"><%= yield %></div>
+  </div>
+  <div class="row result"><%= yield %></div>
+</div>
+
+
 
 </body>
 </html>
