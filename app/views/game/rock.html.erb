@@ -1,11 +1,36 @@
-<!--
+<!-- 
 <h1>Hi, you are at rock.html.erb</h1>
 
-<h2>The user move was rock</h2>
-<h2>The computer move was: <%= @computer_move %> </h2> -->
+<h2>The user move was rock</h2> -->
+
+
+
+<div class="btn-group btn-lg btn-group-justified padding-inside-top-md padding-inside-bottom-md" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <a href="http://localhost:3000/rock">
+      <button type="button" class="btn btn-default">Play Rock</button>
+    </a>
+  </div>
+  <div class="btn-group" role="group">
+    <a href="http://localhost:3000/scissors">
+      <button type="button" class="btn btn-default">Play Scissor</button>
+    </a>
+  </div>
+  <div class="btn-group" role="group">
+    <a href="http://localhost:3000/paper">
+      <button type="button" class="btn btn-default">Play Paper</button>
+    </a>
+  </div>
+</div>
+
+
+<!-- <h2>The computer move was: <%= @computer_move %> </h2> -->
 <!-- <h2>The result was <%= @result %></h2> -->
 
-<!-- The equal sign "=" means output in the browser (see above); without the "=" it will not be added to the url (see below)-->
+<!-- The equal sign "=" means output in the browser (see above); without the "=" it will not be added to the url (see below) -->
+
+
+
 <% if @result=="Tie" %>
 
 <div class="row padding-inside-top-md padding-inside-bottom-md">

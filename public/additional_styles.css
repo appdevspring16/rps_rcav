@@ -7,11 +7,6 @@ div {border: thin red solid;
   float: left;
 }
 
-.status-output {
-  text-align: center-block;
-  align-content: center-block
-}
-
 .margin-adj {
   margin-left: 125px;}
   .pad-adj {padding-top: 15px;}

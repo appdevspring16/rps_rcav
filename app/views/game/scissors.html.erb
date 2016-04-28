@@ -1,5 +1,5 @@
 <!--
-<h1>Hi, you are at paper.html.erb</h1>
+<h1>Hi, you are at rock.html.erb</h1>
 <h2>The user move was rock</h2> -->
 
 <div class="btn-group btn-lg btn-group-justified padding-inside-top-md padding-inside-bottom-md" role="group" aria-label="...">
@@ -25,11 +25,13 @@
 
 <!-- The equal sign "=" means output in the browser (see above); without the "=" it will not be added to the url (see below) -->
 
+
+
 <% if @result=="Tie" %>
 
 <div class="row padding-inside-top-md padding-inside-bottom-md">
   <div class="col-sm-3">
-    <img src="assets/images/paper.png" alt="" />
+    <img src="assets/images/scissors.png" alt="" />
   </div>
   <div class="col-sm-offset-3 col-sm-3">
     <img src="assets/images/rock.png" alt="" />
@@ -37,14 +39,14 @@
 </div>
 </div>
 <div class="row col-sm-offset-1 col-sm-10 status-output padding-inside-top-lg padding-inside-bottom-md badge">
-  <h2>Congrat's you won!</h2>
+  <h2>Sorry, you lost!</h2>
 </div>
 
 <% elsif @result=="Win" %>
 
 <div class="row padding-inside-top-md padding-inside-bottom-md">
   <div class="col-sm-3">
-    <img src="assets/images/paper.png" alt="" />
+    <img src="assets/images/scissors.png" alt="" />
   </div>
   <div class="col-sm-offset-3 col-sm-3">
     <img src="assets/images/scissors.png" alt="" />
@@ -52,7 +54,7 @@
 </div>
 </div>
 <div class="row col-sm-offset-1 col-sm-10 status-output padding-inside-top-lg padding-inside-bottom-md badge">
-  <h2>Sorry, you lost!</h2>
+  <h2>We tied!</h2>
 </div>
 
 
@@ -60,7 +62,7 @@
 
 <div class="row padding-inside-top-md padding-inside-bottom-md">
   <div class="col-sm-3">
-    <img src="assets/images/paper.png" alt="" />
+    <img src="assets/images/scissors.png" alt="" />
   </div>
   <div class="col-sm-offset-3 col-sm-3">
     <img src="assets/images/paper.png" alt="" />
@@ -69,7 +71,7 @@
 </div>
 
 <div class="row col-sm-offset-1 col-sm-10 status-output padding-inside-top-lg padding-inside-bottom-md badge">
-  <h2>We Tied</h2>
+  <h2>Congrats, you Won.</h2>
 </div>
 
 
