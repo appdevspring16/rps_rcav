@@ -13,12 +13,15 @@ class GameController < ApplicationController
     if @user_move == @computer_move
     @result = "tie"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-warning"
     elsif @user_move == "rock" && @computer_move == "paper"
     @result = "lose"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-danger"
     else @user_move == "rock" && @computer_move == "scissors"
     @result = "win"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-success"
     end
 
     render("rock.html.erb")
@@ -33,15 +36,18 @@ class GameController < ApplicationController
     if @user_move == @computer_move
     @result = "tie"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-warning"
     elsif @user_move == "paper" && @computer_move == "scissors"
     @result = "lose"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-danger"
     else @user_move == "paper" && @computer_move == "rock"
     @result = "win"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-success"
     end
 
-    render("paper.html.erb")
+    render("rock.html.erb")
 
   end
 
@@ -53,15 +59,18 @@ class GameController < ApplicationController
     if @user_move == @computer_move
     @result = "tie"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-warning"
     elsif @user_move == "scissors" && @computer_move == "rock"
     @result = "lose"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-danger"
     else @user_move == "scissors" && @computer_move == "paper"
     @result = "win"
     @comp_picture = "/assets/images/#{@computer_move.downcase}.png"
+    @label_color = "label-success"
     end
 
-    render("scissors.html.erb")
+    render("rock.html.erb")
 
   end
 
