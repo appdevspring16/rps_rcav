@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-get("/play/rock", { :controller => "game", :action => "rock"})
+get("/", { :controller => "game", :action => "rock"})
 
-get("/play/paper", { :controller => "game", :action => "paper"})
+get("/rock", { :controller => "game", :action => "rock"})
 
-get("/play/scissors", { :controller => "game", :action => "scissors"})
+get("/paper", { :controller => "game", :action => "paper"})
+
+get("/scissors", { :controller => "game", :action => "scissors"})
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
