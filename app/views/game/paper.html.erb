@@ -14,13 +14,40 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
 <!-- Display Logic -->
-<h2>You played paper</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
 
-<p>
-  The computer played <%= @computer_move %>
-</p>
+          <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary">Play Rock</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-info">Play Paper</button>
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary">Play Scissors</button>
+            </div>
+          </div>
 
-<p>
-  You <%= @result %>
-</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+          <p>You played paper</p>
+        </div>
+        <div class="col-md-4">
+          <p>
+            The computer played <%= @computer_move %>
+          </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          <p>
+            You <%= @result %>
+          </p>
+        </div>
+    </div>
+</div>
 </html>
