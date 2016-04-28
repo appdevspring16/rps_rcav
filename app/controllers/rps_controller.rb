@@ -5,15 +5,15 @@ class RpsController < ApplicationController
     end
     def outcome comp,user_move
       if comp == user_move
-        return "It's a tie!"
+        return "You tied!"
       elsif comp == "rock" && user_move == "paper"
-        return "You Win"
+        return "You win!"
       elsif comp == "paper" && user_move == "scissors"
-        return "You Win"
+        return "You win!"
       elsif comp == "scissors" && user_move == "rock"
-        return "You Win"
+        return "You win!"
       else
-        return "You Lose"
+        return "You lose!"
       end
     end
     def playing moves
@@ -35,15 +35,15 @@ class RpsController < ApplicationController
     end
     def outcome comp,user_move
       if comp == user_move
-        return "It's a tie!"
+        return "You tied!"
       elsif comp == "rock" && user_move == "paper"
-        return "You Win"
+        return "You win!"
       elsif comp == "paper" && user_move == "scissors"
-        return "You Win"
+        return "You win!"
       elsif comp == "scissors" && user_move == "rock"
-        return "You Win"
+        return "You win!"
       else
-        return "You Lose"
+        return "You lose!"
       end
     end
     def playing moves
@@ -65,15 +65,15 @@ class RpsController < ApplicationController
     end
     def outcome comp,user_move
       if comp == user_move
-        return "It's a tie!"
+        return "You tied!"
       elsif comp == "rock" && user_move == "paper"
-        return "You Win"
+        return "You win!"
       elsif comp == "paper" && user_move == "scissors"
-        return "You Win"
+        return "You win!"
       elsif comp == "scissors" && user_move == "rock"
-        return "You Win"
+        return "You win!"
       else
-        return "You Lose"
+        return "You lose!"
       end
     end
     def playing moves
