@@ -4,30 +4,50 @@ class GameController < ApplicationController
 
     if @computer_move== "rock"
       @result = "tied"
-    end
 
-    if @computer_move== "paper"
+    elsif @computer_move== "paper"
       @result = "lost"
-    end
 
-    if @computer_move== "scissors"
+    elsif @computer_move== "scissors"
       @result = "won"
     end
 
-    render("zebra.html.erb")
+    render("play_rock.html.erb")
   end
 end
 
 class GameController < ApplicationController
   def paper
+    @computer_move=["rock", "paper", "scissors"].sample
 
-    render("zebra.html.erb")
+    if @computer_move == "rock"
+      @result= "won"
+
+    elsif computer_move == "paper"
+      @result = "tied"
+
+    elsif computer_move == "scissors"
+      @result = "lost"
+    end
+
+    render("play_paper.html.erb")
   end
 end
 
 class GameController < ApplicationController
   def scissors
+    @computer_move=["rock", "paper", "scissors"].sample
 
-    render("zebra.html.erb")
+    if @computer_move == "rock"
+      @result= "lost"
+
+    elsif computer_move == "paper"
+      @result = "won"
+
+    elsif computer_move == "scissors"
+      @result = "tied"
+    end
+
+    render("play_scissors.html.erb")
   end
 end
