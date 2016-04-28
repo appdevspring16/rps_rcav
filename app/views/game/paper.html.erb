@@ -1,0 +1,53 @@
+
+<h1>Hi, you are at paper.html.erb</h1>
+
+
+<h2>The user move was paper</h2>
+<h2>The computer move was: <%= @computer_move %> </h2>
+<!-- <h2>The result was <%= @result %></h2> -->
+
+
+<!-- The equal sign "=" means output in the browser (see above); without the "=" it will not be added to the url (see below)-->
+<% if @result=="Tie" %>
+
+<div class="row">
+  <div class="col-sm-3">
+    <img src="assets/images/paper.png" alt="" />
+  </div>
+  <div class="col-sm-offset-3 col-sm-3">
+    <img src="assets/images/paper.png" alt="" />
+  </div>
+</div>
+</div>
+<div class="row col-sm-offset-1 col-sm-10"><h2>Ah, we tied.</h2></div>
+
+<% elsif @result=="Win" %>
+
+<div class="row">
+  <div class="col-sm-3">
+    <img src="assets/images/paper.png" alt="" />
+  </div>
+  <div class="col-sm-offset-3 col-sm-3">
+    <img src="assets/images/rock.png" alt="" />
+  </div>
+</div>
+</div>
+
+<div class="row col-sm-offset-1 col-sm-10"><h2>Congrats, You Won!!!</h2></div>
+
+<% else %>
+
+<div class="row">
+  <div class="col-sm-3">
+    <img src="assets/images/paper.png" alt="" />
+  </div>
+  <div class="col-sm-offset-3 col-sm-3">
+    <img src="assets/images/scissors.png" alt="" />
+  </div>
+</div>
+</div>
+<div class="row col-sm-offset-1 col-sm-10"><h2>So sorry, you lost.</h2></div>
+
+
+
+<% end%>

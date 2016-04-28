@@ -3002,7 +3002,7 @@ select[multiple].input-lg {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 42px;
   font-weight: normal;
   line-height: 1.42857143;
   text-align: center;
@@ -3057,7 +3057,7 @@ fieldset[disabled] a.btn {
 }
 .btn-default {
   color: #333;
-  background-color: #fff;
+  background-color: #5C6BC0;
   border-color: #ccc;
 }
 .btn-default:focus,
@@ -3075,7 +3075,7 @@ fieldset[disabled] a.btn {
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
   color: #333;
-  background-color: #e6e6e6;
+  background-color: #3949AB;
   border-color: #adadad;
 }
 .btn-default:active:hover,
