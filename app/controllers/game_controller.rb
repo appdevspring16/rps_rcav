@@ -1,15 +1,15 @@
 class GameController < ApplicationController
-  
+
   def rock
-    render "rockgesture.html.erb"
+    render("rockgesture.html.erb")
   end
-  
+
   def paper
-    render "papergesture.html.erb"
+    render("papergesture.html.erb")
   end
-  
+
   def scissors
-    render "scissorsgesture.html.erb"
+    render("scissorsgesture.html.erb")
   end
-  
-end 
+
+end
