@@ -33,4 +33,15 @@ def scissors
   end
   render("scissors.html.erb")
 end
+
+def result_image
+  @computer_move= ["rock", "paper", "scissors"].sample
+  if @computer_move=="rock"
+    @result="You lose"
+  elsif @computer_move=="paper"
+    @result="You win"
+  else @result="You tied"
+  end
+  render("scissors.html.erb")
+end
 end
