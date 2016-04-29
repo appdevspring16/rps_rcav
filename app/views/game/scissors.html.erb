@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RockPaperScissors</title>
+  <link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" />
+  <script src="/assets/application-25bd6b47ad2ef49757a639cd9dc9d7c4b137f7a0bf03bb8d13757d905d6dfcef.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Ii5hIc9pWN23TNUemZXwgtR1VuAsgE87HGWh/qkYCXZ+DMViIA6cyVdpQm7DGJce+sn0/B26nh2J7zC5S4qa1g==" />
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+</head>
+<body>
+
+<div class="container">
+  <hr>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-group btn-group-justified">
+        <a href="/rock" class="btn btn-block btn-primary">
+          Play Rock
+        </a>
+
+        <a href="/paper" class="btn btn-block btn-info">
+          Play Paper
+        </a>
+
+        <a href="/scissors" class="btn btn-block btn-primary">
+          Play Scissors
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+  <div class="col-md-4 col-md-offset-2 col-xs-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          Scissors
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="/assets/images/scissors.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-xs-6">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          <% if @computer_move == "rock" %>
+          Rock
+          <% elsif @computer_move == "paper" %>
+          Paper
+          <% else %>
+          Scissors
+          <% end %>
+        </h2>
+      </div>
+      <div class="panel-body">
+        <% if @computer_move == "rock" %>
+        <img class="img-responsive" src="/assets/images/rock.png">
+        <% elsif @computer_move == "paper" %>
+        <img class="img-responsive" src="/assets/images/paper.png">
+        <% else %>
+        <img class="img-responsive" src="/assets/images/scissors.png">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="well text-center">
+      <h1>
+
+        <%   if@result == "Tie"    %>
+        <span class="label label-warning">
+        You Tied
+        </span>
+        <% elsif @result == "Win"  %>
+        <span class="label label-success">
+        You Won
+        </span>
+        <% else %>
+        <span class="label label-danger">
+        You Lost
+        </span>
+        <% end %>
+        
+      </h1>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
