@@ -5,17 +5,17 @@
 <div class="btn-group btn-lg btn-group-justified padding-inside-top-md padding-inside-bottom-md" role="group" aria-label="...">
   <div class="btn-group" role="group">
     <a href="http://localhost:3000/rock">
-      <button type="button" class="btn btn-default">Play Rock</button>
+      <button type="button" class="btn btn-default play-bar">Play Rock</button>
     </a>
   </div>
   <div class="btn-group" role="group">
     <a href="http://localhost:3000/scissors">
-      <button type="button" class="btn btn-default">Play Scissor</button>
+      <button type="button" class="btn btn-default play-bar">Play Scissor</button>
     </a>
   </div>
   <div class="btn-group" role="group">
     <a href="http://localhost:3000/paper">
-      <button type="button" class="btn btn-default">Play Paper</button>
+      <button type="button" class="btn btn-default play-bar">Play Paper</button>
     </a>
   </div>
 </div>
@@ -27,49 +27,109 @@
 
 <% if @result=="Tie" %>
 
-<div class="row padding-inside-top-md padding-inside-bottom-md">
-  <div class="col-sm-3">
-    <img src="assets/images/paper.png" alt="" />
+<div>
+  <div class="col-sm-6 panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title text-center">
+      Your Move: Paper
+    </h2>
   </div>
-  <div class="col-sm-offset-3 col-sm-3">
-    <img src="assets/images/rock.png" alt="" />
+    <div class="panel-body"><div class="row padding-inside-top-md padding-inside-bottom-md">
+      <div class="col-sm-6">
+        <img src="assets/images/paper.png" alt="" />
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="col-sm-6 panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title text-center">
+    My Move: Paper
+  </h2>
+</div>
+  <div class="panel-body"><div class="row padding-inside-top-md padding-inside-bottom-md">
+    <div class="col-sm-6">
+      <img src="assets/images/paper.png" alt="" />
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row col-sm-offset-1 col-sm-10 status-output padding-inside-top-md padding-inside-bottom-md badge">
+  <button type="button" class="btn btn-default result-tie">Ah, we tied.</button>
+</div>
+
+<% elsif @result=="Win" %>
+
+<div>
+  <div class="col-sm-6 panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title text-center">
+      Your Move: Paper
+    </h2>
+  </div>
+    <div class="panel-body"><div class="row padding-inside-top-md padding-inside-bottom-md">
+      <div class="col-sm-6">
+        <img src="assets/images/paper.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-6 panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title text-center">
+    My Move: Rock
+  </h2>
+</div>
+  <div class="panel-body"><div class="row padding-inside-top-md padding-inside-bottom-md">
+    <div class="col-sm-6">
+      <img src="assets/images/Rock.png" alt="" />
+    </div>
+  </div>
+</div>
 </div>
 </div>
 <div class="row col-sm-offset-1 col-sm-10 status-output padding-inside-top-md padding-inside-bottom-md badge">
   <button type="button" class="btn btn-default result-win">Congrats, you won.</button>
 </div>
 
-<% elsif @result=="Win" %>
 
-<div class="row padding-inside-top-md padding-inside-bottom-md">
-  <div class="col-sm-3">
-    <img src="assets/images/paper.png" alt="" />
+<% else %>
+
+<div>
+  <div class="col-sm-6 panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title text-center">
+      Your Move: Paper
+    </h2>
   </div>
-  <div class="col-sm-offset-3 col-sm-3">
-    <img src="assets/images/scissors.png" alt="" />
+    <div class="panel-body"><div class="row padding-inside-top-md padding-inside-bottom-md">
+      <div class="col-sm-6">
+        <img src="assets/images/paper.png" alt="" />
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="col-sm-6 panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title text-center">
+    My Move: Scissors
+  </h2>
+</div>
+  <div class="panel-body"><div class="row padding-inside-top-md padding-inside-bottom-md">
+    <div class="col-sm-6">
+      <img src="assets/images/scissors.png" alt="" />
+    </div>
+  </div>
+</div>
 </div>
 </div>
 <div class="row col-sm-offset-1 col-sm-10 status-output padding-inside-top-md padding-inside-bottom-md badge">
   <button type="button" class="btn btn-default result-lose">Sorry, you lost.</button>
-</div>
-
-
-<% else %>
-
-<div class="row padding-inside-top-md padding-inside-bottom-md">
-  <div class="col-sm-3">
-    <img src="assets/images/paper.png" alt="" />
-  </div>
-  <div class="col-sm-offset-3 col-sm-3">
-    <img src="assets/images/paper.png" alt="" />
-  </div>
-</div>
-</div>
-
-<div class="row col-sm-offset-1 col-sm-10 status-output padding-inside-top-md padding-inside-bottom-md badge">
-  <button type="button" class="btn btn-default result-tie">Ah, we tied.</button>
 </div>
 
 

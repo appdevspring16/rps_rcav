@@ -1,4 +1,5 @@
 class GameController < ApplicationController
+
   def user_plays_rock
     @computer_move=["rock","paper","scissors"].sample
 
