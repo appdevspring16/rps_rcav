@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  get(":player_move", { :controller => "game", :action => "rps_rcav"})  #this is a route, and every route will look like this
+  #controller and action are keys. the arrow means goes to something (hash arrow) *the controller & action will be the two keys that will be everywhere
+#When a user clicks on this link, the above is saying, go to controllers folder and there will be a file names "game", then find a method inside that folder called "rock" and execute it.
+#Create a new folder in controllers folder, name it what you named your controller, in this case "game", so the name would be game_cotroller.rb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +72,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
