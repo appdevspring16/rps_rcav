@@ -2,21 +2,21 @@
 <html>
 <head>
 
-<!-- <link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
-<script src="/assets/application-25bd6b47ad2ef49757a639cd9dc9d7c4b137f7a0bf03bb8d13757d905d6dfcef.js"></script>
-<meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="vd1Cs5NkZas5/9t0NcDZZIlLtrZXn5j+czShBhSrYnCZy+880o6/+yXMzpVYWqHxEF5Qv+/Oq8MYR6VIupcZSA=="> -->
+  <!-- <link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+  <script src="/assets/application-25bd6b47ad2ef49757a639cd9dc9d7c4b137f7a0bf03bb8d13757d905d6dfcef.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+  <meta name="csrf-token" content="vd1Cs5NkZas5/9t0NcDZZIlLtrZXn5j+czShBhSrYnCZy+880o6/+yXMzpVYWqHxEF5Qv+/Oq8MYR6VIupcZSA=="> -->
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
 
-<link rel="stylesheet" href="assets/application.css">
+  <link rel="stylesheet" href="assets/application.css">
 
-<link rel="stylesheet" href="app/views/layouts/application.css">
+  <link rel="stylesheet" href="app/views/layouts/application.css">
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <div class="col-md-4 col-xs-6">
+      <div class="col-md-4">
         <div class="panel panel-danger">
           <div class="panel-heading">
             <h2 class="panel-title text-center">
@@ -66,25 +66,24 @@
             </h2>
           </div>
         </div>
-      </div>
 
         <div class="panel-body">
-        <img class="img-responsive" src= "<%"/assets/images/"+@computer_move.to_s+".png"%>"
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <div class="well text-center">
-                <h1>
-                  <span class="label <%= @result_label %>">
-                    You <%= @result %>!
-                  </span>
-                </h1>
-              </div>
-            </div>
-          </div>
-
+          <img class="img-responsive" src= "<%= @result_image %>"
         </div>
 
+        <div class="row">
+          <div class="col-md-12">
+            <div class="well text-center">
+              <h1>
+                <span class="label <%= @result_label %>">
+                  You <%= @result %>!
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </body>
-</html>
+    </html>
