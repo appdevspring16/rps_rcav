@@ -36,9 +36,9 @@ end
 
 def result_image
   @computer_move= ["rock", "paper", "scissors"].sample
-  if @computer_move=="rock"
+  if @computer_move=="Rock"
     @result="You lose"
-  elsif @computer_move=="paper"
+  elsif @computer_move=="Paper"
     @result="You win"
   else @result="You tied"
   end

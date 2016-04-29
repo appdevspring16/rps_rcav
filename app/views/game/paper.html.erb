@@ -1,17 +1,3 @@
-<h1>Rock Paper Scissors Forever!</h1>
-
-<p>
-  You played paper.
-</p>
-
-<p>
-  The computer played <%= @computer_move %>. <%= @result %>.
-</p>
-
-<p>
-  <% @result %>
-</p>
-
 
 <div class="container">
   <hr>
@@ -23,12 +9,15 @@
         <a href="/rock" class="btn btn-block btn-primary" role="button">Play Rock</a>
         <a href="/paper" class="btn btn-block btn-info" role="button">Play Paper</a>
         <a href="/scissors" class="btn btn-block btn-primary" role="button">Play Scissors</a>
+
       </div>
+      <hr>
     </div>
-    <hr>
+
     <div class="row">
-      <div class="col-med-4 col-xs-6">
-        <div class="panel panel-success">
+        <div class="col-md-4 col-md-offset-2 col-xs-6">
+
+          <div class="panel panel-success">
           <div class="panel-heading">
             <h2 class="panel-title text-center">Paper</h2>
           </div>
@@ -41,17 +30,17 @@
         <div class="panel panel-danger">
           <div class="panel-heading">
             <h2 class="panel-title text-center">
-              <%=@computer_move %>
+              <%=@computer_move.capitalize %>
             </h2>
           </div>
           <div class="panel-body">
-            <% if @computer_move = "rock" %>
-<%= image_tag("assets/images/rock", class:"img-responsive")  %>
+            <% if @computer_move == "rock" %>
+<img class="img-responsive" src="assets/images/rock.png"  >
           <%# img class="img-responsive"src="assets/images/rock.png" alt="" %>
-            <% elsif @computer_move = "paper" %>
-            <% img_tag("assets/images/paper", class:"img-responsive") %>
+            <% elsif @computer_move == "paper" %>
+            <img class="img-responsive" src="assets/images/paper.png"  >
             <% else %>
-            <% img_tag("assets/images/scissors", class:"img-responsive") %>
+            <img class="img-responsive" src="assets/images/scissors.png"  >
 <%end %>
           </div>
         </div>
