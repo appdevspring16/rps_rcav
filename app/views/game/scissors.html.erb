@@ -1,0 +1,32 @@
+
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-2">
+        <a class="btn btn-primary" href="/play/rock" role="button" style="width:100%;">Play Rock</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="btn btn-info" href="/play/paper" role="button" style="width:100%;">Play Paper</a>
+      </div>
+      <div class="col-sm-2">
+        <a class="btn btn-primary" href="/play/scissors" role="button" style="width:100%;">Play Scissors</a>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-offset-3 col-sm-3">
+          <button type="button" class="btn btn-success" style="width:100%;">Scissors</button>
+          <img src="/assets/images/scissors.png" style="width:100%;">
+        </div>
+        <div class="col-sm-offset-0 col-sm-3">
+          <button type="button" class="btn btn-danger" style="width:100%;"><%= @computer_move %></button>
+          <img src="<%= @img %>" style="width:100%;"></g>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-4 col-sm-4">
+          <button type="button" class="btn btn-secondary" style="width:100%;"><%= @result %></button>
+        </div>
+    </div>
+</div>
