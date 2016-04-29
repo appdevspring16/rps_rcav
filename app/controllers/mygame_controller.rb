@@ -1,4 +1,4 @@
-class GameController < ApplicationController
+class MygameController < ApplicationController
 
   def rock
     render("rockgesture.html.erb")
