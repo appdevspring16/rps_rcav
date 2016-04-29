@@ -1,1 +1,54 @@
-<p>hi! scissors!</p>
+<div class="container">
+  <hr>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+      <div class="btn-group btn-group-justified">
+        <a href="/rock" class="btn btn-block btn-primary">
+          Play Rock
+        </a>
+        <a href="/paper" class="btn btn-block btn-info">
+          Play Paper
+        </a>
+        <a href="/scissors" class="btn btn-block btn-primary">
+          Play Scissors
+        </a>
+          </div>
+      </div>
+    </div>
+  <hr>
+    <div class="row Images">
+        <div class="col-md-offset-2 col-md-4">
+      <div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title text-center">Scissors</h3>
+  </div>
+  <div class="panel-body">
+    <img class="img-responsive" src="/assets/images/scissors.png">
+  </div>
+</div>
+      </div>
+        <div class="col-md-4">
+      <div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title text-center"><%=@computer_move.capitalize%></h3>
+  </div>
+  <div class="panel-body">
+    <img class="img-responsive" src="/assets/images/<%=@image%>.png">
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+      <div class="well text-center">
+         <h1>
+        <span class="label label-<%=@color%>">
+            You <%=@result%>!
+        </span>
+        </h1>
+          </div>
+      </div>
+    </div>
+</div>
