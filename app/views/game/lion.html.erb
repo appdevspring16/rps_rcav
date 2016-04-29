@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-offset-2 col-md-8">
+          <div class="btn-group btn-group-justified">
+
+            <a href="http://localhost:3000/play/rock" button type="button" class="btn btn-block btn-primary">
+            Play Rock
+            </a>
+
+            <a href="http://localhost:3000/play/paper" class="btn btn-block btn-info">
+            Play Paper
+            </a>
+
+            <a href="http://localhost:3000/play/scissors" class="btn btn-block btn-primary">
+            Play Scissors
+            </a>
+          </div>
+        </div>
+
+    </div>
+
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-4 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">You played scissors.</h3>
+        </div>
+
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/scissors.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">The computer played <%= @computer_move %>.</h3>
+        </div>
+
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/<%=@image%>.png" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+          <div class="col-md-offset-4 col-md-4">
+            <div class="well text-center">
+              <h2>You <%= @result %></h2>
+            </div>
+          </div>
+    </div>
+</div>
