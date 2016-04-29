@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get("/play/:the_move", { :controller => "game", :action => "rps" })
+
+ get("/play/:the_move", { :controller => "game", :action => "rps" })
 
 
   # The priority is based upon order of creation: first created -> highest priority.
