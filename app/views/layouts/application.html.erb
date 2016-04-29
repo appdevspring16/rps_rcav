@@ -5,10 +5,40 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="assets/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
 
-<%= yield %>
+<!-- <body>
+  <div class="container">
+    <hr>
+    <div class="row links">
+      <div class="col-sm-offset-2 col-sm-8">
+        <div class="btn-group btn-group-justified">
+          <a href="/rock" class="btn btn-block btn-primary">Play Rock</a>
+          <a href="/paper" class="btn btn-block btn-primary">Play Paper</a>
+          <a href="/scissors" class="btn btn-block btn-primary">Play Scissors</a>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="row images">
+      <div class="col-md-offset-2 col-md-4">
 
-</body>
+  <div class="panel panel-success">...</div>
+
+</div>
+      <div class="col-md-4">
+        <div class="panel panel-danger">...</div>
+      </div>
+    </div>
+    <div class="row results">
+      <div class="col-xs-12"></div>
+    </div>
+  </div>
+
+  </html>
+
+
+</body> -->
+  <%= yield %>
 </html>
