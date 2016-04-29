@@ -1,5 +1,5 @@
 class GameController < ApplicationController
-  def Rock
+  def rock
     @computer_move = ["Rock","Paper","Scissors"].sample
     if @computer_move == "Rock"
         @result = "Tied"
@@ -10,9 +10,9 @@ class GameController < ApplicationController
     if @computer_move == "Scissors"
         @result = "Won"
     end
-    render("Rock.html.erb")
+    render("rock.html.erb")
   end
-  def Paper
+  def paper
     @computer_move = ["Rock","Paper","Scissors"].sample
     if @computer_move == "Paper"
         @result = "Tied"
@@ -23,9 +23,9 @@ class GameController < ApplicationController
     if @computer_move == "Rock"
         @result = "Won"
     end
-    render("Paper.html.erb")
+    render("paper.html.erb")
   end
-  def Scissors
+  def scissors
     @computer_move = ["Rock","Paper","Scissors"].sample
     if @computer_move == "Scissors"
         @result = "Tied"
@@ -36,6 +36,6 @@ class GameController < ApplicationController
     if @computer_move == "Paper"
         @result = "Won"
     end
-    render("Scissors.html.erb")
+    render("scissors.html.erb")
   end
 end
