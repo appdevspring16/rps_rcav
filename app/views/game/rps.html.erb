@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row navigation">
+        <div class="col-md-offset-2 col-md-8">
+          <hr>
+          <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+              <a class="btn btn-primary" href="/rock">Rock</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a class="btn btn-info" href="/paper">Paper</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a class="btn btn-primary" href="/scissors">Scissors</a>
+            </div>
+          </div>
+          <hr>
+        </div>
+    </div>
+    <div class="row moves">
+        <div class="col-md-offset-2 col-md-4 col-xs-6">
+        <div class="panel panel-<%= @p_move %>">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">
+              <%= @player_move.capitalize %>
+            </h2>
+          </div>
+          <div class="panel-body">
+            <img src="assets/images/<%= @player_graphic %>" class="img-responsive" />
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <div class="panel panel-<%= @c_move %>">
+          <div class="panel-heading">
+            <h2 class="panel-title text-center">
+              <%= @computer_move.capitalize %>
+            </h2>
+          </div>
+          <div class="panel-body">
+            <img src="assets/images/<%= @computer_graphic %>" class="img-responsive" />
+          </div>
+        </div>
+        </div>
+    </div>
+    <div class="row result">
+        <div class="col-md-offset-2 col-md-8">
+          <div class="well text-center">
+          <h1>
+          <span class="label label-<%= @result_class %>">
+            <%= @result %>
+          </span>
+          </h1>
+        </div>
+        </div>
+    </div>
+</div>
