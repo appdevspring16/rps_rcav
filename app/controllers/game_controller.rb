@@ -3,11 +3,11 @@ class GameController < ApplicationController
 @computer_move=["rock","paper","scissors"].sample
 
 if @computer_move=="rock"
-  @result="tie"
+  @result="tied"
 elsif @computer_move=="paper"
-  @result="lose"
+  @result="lost"
 elsif @computer_move=="scissors"
-  @result="win"
+  @result="won"
 end
 
 render("rock.html.erb")
@@ -20,11 +20,11 @@ render("rock.html.erb")
 @computer_move=["rock","paper","scissors"].sample
 
 if @computer_move=="paper"
-  @result="tie"
+  @result="tied"
 elsif @computer_move=="scissors"
-  @result="lose"
+  @result="lost"
 elsif @computer_move=="rock"
-  @result="win"
+  @result="won"
 end
 
 
@@ -37,11 +37,11 @@ render("paper.html.erb")
 @computer_move=["rock","paper","scissors"].sample
 
 if @computer_move=="scissors"
-  @result="tie"
+  @result="tied"
 elsif @computer_move=="rock"
-  @result="lose"
+  @result="lost"
 elsif @computer_move=="paper"
-  @result="win"
+  @result="won"
 end
 
 render("scissors.html.erb")
