@@ -3,9 +3,30 @@
 body {
   font-family: "Open Sans";
 }
-div {border: thin red solid;
+div {
+  /*border: thin red solid;*/
   float: left;
 }
+
+.play-bar {border-radius: 10px;}
+.player{border: thin #388E3C solid;}
+.result-tie {color: white;
+border-radius: 10px;
+background-color: #FFA000;
+}
+
+.result-win {color: white;
+border-radius: 10px;
+background-color: #388E3C;
+}
+
+.result-lose {color: white;
+border-radius: 10px;
+background-color: #D32F2F;
+}
+
+
+
 
 .margin-adj {
   margin-left: 125px;}
