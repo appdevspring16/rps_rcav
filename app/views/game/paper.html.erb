@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html>
-<h1>Hello world!</h1>
+<head>
 
-<p>You played paper.</p>
-
-<p>
-  The computer played <%= @computer_move%>.
-</p>
-
-<p>
-  You <%= @result%>!
-</p>
-
-<!--
-<% if @computer_move = "rock" %>
-<%= @result = "tied" %>
-<% end %>
-
-<%if @computer_move = "paper" %>
-<%= @result = "win" %>
-<% end %>
-
-<% if @computer_move = "scissors" %>
-<%= @result = "lose" %>
-<% end %>
-<% end %> -->
-
-<link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+<!-- <link rel="stylesheet" media="all" href="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
 <script src="/assets/application-25bd6b47ad2ef49757a639cd9dc9d7c4b137f7a0bf03bb8d13757d905d6dfcef.js"></script>
 <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="vd1Cs5NkZas5/9t0NcDZZIlLtrZXn5j+czShBhSrYnCZy+880o6/+yXMzpVYWqHxEF5Qv+/Oq8MYR6VIupcZSA==">
+<meta name="csrf-token" content="vd1Cs5NkZas5/9t0NcDZZIlLtrZXn5j+czShBhSrYnCZy+880o6/+yXMzpVYWqHxEF5Qv+/Oq8MYR6VIupcZSA=="> -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
+
+<link rel="stylesheet" href="assets/application.css">
+
+<link rel="stylesheet" href="app/views/layouts/application.css">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -77,23 +62,29 @@
         <div class="panel panel-danger">
           <div class="panel-heading">
             <h2 class="panel-title text-center">
-              <% @computer_move %>
+              <%= @computer_move %>
             </h2>
           </div>
-          <div class="panel-body">
-            <img class="img-responsive" src= "<%"/assets/images/"+@computer_move.to_s+".png"%>"
-
-
-            <span class="label label-success">
-            You <%= @result %>
-          </span>
-        </h1>
-
-        <%= yield %>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-</div>
-</body>
+
+        <div class="panel-body">
+        <img class="img-responsive" src= "<%"/assets/images/"+@computer_move.to_s+".png"%>"
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="well text-center">
+                <h1>
+                  <span class="label <%= @result_label %>">
+                    You <%= @result %>!
+                  </span>
+                </h1>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    </body>
 </html>
