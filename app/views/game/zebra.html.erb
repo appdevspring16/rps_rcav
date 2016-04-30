@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>Hi! You are at Rock, Paper, Scissors!!!</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-2">
+      <button type="button" class="btn btn-primary btn-block"><a href="/rock">Choose Rock</a></button>
+    </div>
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-info btn-block"><a href="/paper">Choose Paper</a></button>
+    </div>
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary btn-block"><a href="/scissors">Choose Scissors</a></button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container">
+    <div class="col-sm-offset-3 col-sm-3">
+      <div class="media">
+        <div class="text-center">
+          <h2>
+            <%= @player_move.capitalize %>
+          </h2>
+        </div>
+        <div class="image-responsive">
+          <% if @player_move == "rock" %>
+          <img src="assets/images/rock.png" class="image-responsive">
+          <%elsif @player_move == "paper" %>
+          <img src="assets/images/paper.png" class="image-responsive">
+          <%else %>
+          <img src="assets/images/scissors.png" class="image-responsive">
+          <%end%>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-offset-0 col-sm-3">
+      <div class="media">
+        <div class="text-center">
+          <h2>
+            <%= @computer_move.capitalize %>
+          </h2>
+        </div>
+        <div class="image-responsive">
+          <% if @computer_move == "rock" %>
+          <img src="assets/images/rock.png" class="image-responsive">
+          <%elsif @computer_move == "paper" %>
+          <img src="assets/images/paper.png" class="image-responsive">
+          <%else %>
+          <img src="assets/images/scissors.png" class="image-responsive">
+          <%end%>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="row Result">
+    <div class="col-sm-12 text-center">
+      <% if @result == "Tie" %>
+      <h2>Ah, we tied</h2>
+      <%elsif @result == "Win"%>
+      <h2>Congrats! You WON!!!</h2>
+      <%else %>
+      <h2>So sorry, you lost</h2>
+      <%end%>
+    </div>
+  </div>
+</div>
