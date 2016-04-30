@@ -1,0 +1,71 @@
+<div class="container">
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <div class="btn-group btn-group-justified" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <a href="/paper" class="btn btn-primary">Play Rock</a>
+        </div>
+        <div class="btn-group" role="group">
+          <a href="/paper" class="btn btn-info">Play Paper</a>
+        </div>
+        <div class="btn-group" role="group">
+          <a href="/scissors" class="btn btn-primary">Play Scissors</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-4">
+
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">Paper</h3>
+        </div>
+        <div class="panel-body">
+          <img src="/assets/images/paper.png" class="img-responsive">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center"><%=@computer_move.capitalize%></h3>
+        </div>
+        <div class="panel-body">
+          <%if @computer_move == "rock"%>
+          <img src="/assets/images/rock.png" class="img-responsive">
+          <%elsif @computer_move == "paper"%>
+          <img src="/assets/images/paper.png" class="img-responsive">
+          <%else%>
+          <img src="/assets/images/scissors.png" class="img-responsive">
+          <%end%>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12 well text-center">
+      <h1>
+      <%if @result == "Tie"%>
+      <span class="label label-warning">You tied!</span>
+      <%elsif @result == "Win"%>
+        <span class="label label-success">You won!</span>
+      <%else @result == "Lose"%>
+        <span class="label label-danger">You lost!</span>
+      <%end%>
+      </h1>
+    </div>
+  </div>
+
+</div>
