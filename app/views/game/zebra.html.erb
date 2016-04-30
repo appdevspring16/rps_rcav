@@ -19,12 +19,12 @@
     <div class="container">
     <div class="col-sm-offset-3 col-sm-3">
       <div class="media">
-        <div class="media-body text-center">
+        <div class="text-center">
           <h2>
             <%= @player_move.capitalize %>
           </h2>
         </div>
-        <div class="media image-responsive">
+        <div class="image-responsive">
           <% if @player_move == "rock" %>
           <img src="assets/images/rock.png" class="image-responsive">
           <%elsif @player_move == "paper" %>
@@ -37,12 +37,12 @@
     </div>
     <div class="col-sm-offset-0 col-sm-3">
       <div class="media">
-        <div class="media-body text-center">
+        <div class="text-center">
           <h2>
             <%= @computer_move.capitalize %>
           </h2>
         </div>
-        <div class="media">
+        <div class="image-responsive">
           <% if @computer_move == "rock" %>
           <img src="assets/images/rock.png" class="image-responsive">
           <%elsif @computer_move == "paper" %>
