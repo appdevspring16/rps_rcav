@@ -1,0 +1,23 @@
+<h1>Hi, you played Rock!</h1>
+
+<img src="/assets/images/rock.png"/>
+
+<h2>The user move was rock</h2>
+<h2>The computer move was: <%= @computer_move %></h2>
+
+<h2>The result is You: <%= @result %>
+
+  <% if @result == "Tie" %>
+  <h2>Ah, we tied</h2>
+  <% elsif @result == "Win" %>
+  <h2>Congrats! You WON!!!!!</h2>
+  <% else %>
+  <h2>So sorry, you lost.</h2>
+
+<% end %>
+
+<a href="/paper">Let's play paper this time</a>
+
+<p>
+
+<a href="/scissors">Let's play scissors this time</a>
