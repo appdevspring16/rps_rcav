@@ -1,0 +1,17 @@
+<h1>Hi, your move was rock.</h1>
+
+<img src="/assets/images/rock.png" />
+
+<h2>The user move was rock </h2>
+
+<h2>The computer move was:  <%=  @computer_move  %> </h2>
+
+<h2>The result is You: <%=   @result  %> </h2>
+
+<%  if @result == "Tie"  %>
+<h2> Ah, we tied </h2>
+<%  elsif @result == "Win"  %>
+<h2> Congrats! You WON!!!</h2>
+<% else %>
+<h2> So sorry, you lost. </h2>
+<% end %>
