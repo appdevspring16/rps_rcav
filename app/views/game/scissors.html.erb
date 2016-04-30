@@ -1,0 +1,64 @@
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+      <div class="btn-group btn-group-justified" role="group">
+        <a href="/rock" class="btn btn-block btn-primary">Play Rock</a>
+        <a href="/paper" class="btn btn-block btn-info">Play Paper</a>
+        <a href="/scissors" class="btn btn-block btn-primary">Play Scissors</a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">Scissors</h3>
+        </div>
+        <div class="panel-body">
+          <img class="img-responsive" src="/assets/images/scissors.png" />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <% if @computer_move == "rock" %>
+          <h3 class="panel-title text-center">Rock</h3>
+          <% elsif @computer_move == "paper" %>
+          <h3 class="panel-title text-center">Paper</h3>
+          <% else %>
+          <h3 class="panel-title text-center">Scissors</h3>
+          <% end %>
+        </div>
+        <div class="panel-body">
+          <% if @computer_move == "rock" %>
+          <img class="img-responsive" src="/assets/images/rock.png" />
+          <% elsif @computer_move == "paper" %>
+          <img class="img-responsive" src="/assets/images/paper.png" />
+          <% else %>
+          <img class="img-responsive" src="/assets/images/scissors.png" />
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <% if @result == "Tie" %>
+      <div class="well text-center">
+        <h1><span class="label label-warning">You tied!</span></h1>
+      </div>
+      <% elsif @result == "Win" %>
+      <div class="well text-center">
+        <h1><span class="label label-success">You won!</span></h1>
+      </div>
+      <% else %>
+      <div class="well text-center">
+        <h1><span class="label label-danger">You lost!</span></h1>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
