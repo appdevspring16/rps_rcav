@@ -43,21 +43,22 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <% if @result == "Tie" %>
-        <div class="well text-center">
-          <h1><span class="label label-warning">You tied!</span></h1>
-        </div>
-        <% elsif @result == "Win" %>
-        <div class="well text-center">
-          <h1><span class="label label-success">You won!</span></h1>
-        </div>
-        <% else %>
-        <div class="well text-center">
-          <h1><span class="label label-danger">You lost!</span></h1>
-        </div>
-        <% end %>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <% if @result == "Tie" %>
+      <div class="well text-center">
+        <h1><span class="label label-warning">You tied!</span></h1>
       </div>
+      <% elsif @result == "Win" %>
+      <div class="well text-center">
+        <h1><span class="label label-success">You won!</span></h1>
+      </div>
+      <% else %>
+      <div class="well text-center">
+        <h1><span class="label label-danger">You lost!</span></h1>
+      </div>
+      <% end %>
     </div>
   </div>
+</div>
