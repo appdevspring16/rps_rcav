@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div class="container">
+  <hr>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-group btn-group-justified">
+        <a href="/rock" class="btn btn-block btn-primary">
+          Play Rock
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-group btn-group-justified">
+        <a href="/paper" class="btn btn-block btn-info">
+          Play Paper
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-12">
+      <div class="btn-group btn-group-justified">
+        <a href="/scissors" class="btn btn-block btn-primary">
+          Play Scissors
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+  <div class="col-md-4 col-md-offset-2 col-xs-6">
+    <!-- <div class="panel panel-success"> -->
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <%= @user_move %>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <% if @user_move == "Rock" %>
+        <img class="img-responsive" src="/assets/images/rock.png">
+        <% elsif @user_move == "Paper" %>
+        <img class="img-responsive" src="/assets/images/paper.png">
+        <% else %>
+        <img class="img-responsive" src="/assets/images/scissors.png">
+        <% end %>
+      </div>
+    <!-- </div> -->
+  </div>
+
+  <div class="col-md-4 col-xs-6">
+    <!-- <div class="panel panel-danger"> -->
+      <div class="panel-heading">
+        <h1 class="panel-title text-center">
+          <% if @computer_move == "rock" %>
+            Rock
+          <% elsif @computer_move == "paper" %>
+            Paper
+          <% else %>
+            Scissors
+          <% end %>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <% if @computer_move == "rock" %>
+        <img class="img-responsive" src="/assets/images/rock.png">
+        <% elsif @computer_move == "paper" %>
+        <img class="img-responsive" src="/assets/images/paper.png">
+        <% else %>
+        <img class="img-responsive" src="/assets/images/scissors.png">
+        <% end %>
+      </div>
+    <!-- </div> -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="well text-center">
+      <h1>
+
+        <!-- <span class="label label-warning"> -->
+          <% if @result == "Tie" %>
+          <h2> You tied! </h2>
+          <% elsif @result == "Win" %>
+          <h2> You won! </h2>
+          <% else %>
+          <h2> You lost! </h2>
+          <% end %>
+        <!-- </span> -->
+      </h1>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
+
+<!-- <img src = "/assets/images/rock.png"
+
+<h2>The computer move was: <%= @computer_move %> </h2> -->
+
+<!--  <h2>The results is You: <%= @result %> </h2>
+# = means split it out in the browser -->
+<!-- <% if @result == "Tie" %>
+<h2> Ah, we tied </h2>
+<% elsif @result == "Win" %>
+<h2> Congrat, You WON! </h2>
+<% else %>
+<h2> So sorry, you lost. </h2>
+<% end %> -->
