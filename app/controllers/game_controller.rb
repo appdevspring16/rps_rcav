@@ -1,33 +1,27 @@
 class GameController < ApplicationController
   def rock
     @rock= "http://localhost:3000/rock"
+    @computer_move = ["Rock", "Paper", "Scissors"].sample
+
     render("rock.html.erb")
   end
   def scissors
+    @scissors= "http://localhost:3000/scissors"
+    @computer_move = ["Rock", "Paper", "Scissors"].sample
 
     render("scissors.html.erb")
   end
   def paper
+    @paper= "http://localhost:3000/paper"
+    @computer_move = ["Rock", "Paper", "Scissors"].sample
 
     render("paper.html.erb")
   end
+  def default
+    @default= "http://localhost:3000"
+    @computer_move = ["Rock", "Paper", "Scissors"].sample
 
-  # user_move = gets.chomp
-  # computer_move = ["rock", "paper", "scissors"].sample
+    render("rock.html.erb")
+  end
 
-  # if user_move == computer_move
-  # return "You tied!"
-  # elsif user_move == "paper" && computer_move == "rock"
-  # return "You win!"
-  # elsif user_move == "paper" && computer_move == "scissors"
-  # return "You lose!"
-  # elsif user_move == "scissors" && computer_move == "rock"
-  # return "You lose!"
-  # elsif user_move == "scissors" && computer_move == "paper"
-  # return "You win!"
-  # elsif user_move == "rock" && computer_move == "paper"
-  # return "You lose!"
-  # elsif user_move == "rock" && computer_move == "scissors"
-  # return "You win!"
-  # end
 end
