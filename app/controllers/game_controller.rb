@@ -1,18 +1,4 @@
 class GameController < ApplicationController
-  def rps
-    @user_move = params[:move]
-    @computer_move = ["rock", "paper", "scissors"].sample
-
-    if @user_move == @computer_move
-      @result = "tied"
-
-    elsif (@user_move == "scissors" && @computer_move == "rock")||(@user_move =="paper" && @computer_move="scissors")||(@user_move=="rock"&&@computer_move=="paper")
-      @result =  "lost"
-    elsif (@user_move == "scissors" && @computer_move == "paper")||(@user_move =="paper" && @computer_move="rock")||(@user_move=="rock"&&@computer_move=="scissors")
-      @result =  "won"
-  end
-    render("user_plays.html.erb")
-  end
 
   def rock
     @computer_move = ["rock", "paper", "scissors"].sample
