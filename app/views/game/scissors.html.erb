@@ -1,0 +1,12 @@
+<h1>Welcome</h1>
+
+<h2>You played scissors</h2>
+
+<h2>The computer played <%= @computer_move %> </h2>
+<% if @result == "Tie" %>
+<h2>Ah, we tied </h2>
+<% elsif @result == "Win" %>
+<h2>Congrats! You WON!!!!</h2>
+<% else %>
+<h2> So sory, you lost. </h2>
+<%end%>

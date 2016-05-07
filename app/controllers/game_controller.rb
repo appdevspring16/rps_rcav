@@ -1,17 +1,41 @@
 class GameController < ApplicationController
-  def user_plays_rock
-@computer_move = ["rock", "paper", "scissors"].sample
+  def rock
+    @computer_move = ["rock", "paper", "scissors"].sample
 
-if @computer_move == "rock"
-  @result = "Tie"
-elsif @computer_move == "paper"
-  @result == "Lose"
-  
-end
+    if @computer_move == "rock"
+      @result = "Tie"
+    elsif @computer_move == "paper"
+      @result = "Lose"
+    else @computer_move == "scissors"
+      @result = "Win"
+    end
+    render("rock.html.erb")
+  end
 
+  def paper
+    @computer_move = ["rock", "paper", "scissors"].sample
 
+    if @computer_move == "rock"
+      @result = "Win"
+    elsif @computer_move == "paper"
+      @result = "Tie"
+    else @computer_move == "scissors"
+      @result = "Lose"
+    end
+    render("paper.html.erb")
+  end
 
-render("zebra.html.erb")
+  def scissors
+    @computer_move = ["rock", "paper", "scissors"].sample
+
+    if @computer_move == "rock"
+      @result = "Lose"
+    elsif @computer_move == "paper"
+      @result = "Win"
+    else @computer_move == "scissors"
+      @result = "Tie"
+    end
+    render("scissors.html.erb")
   end
 
 end
