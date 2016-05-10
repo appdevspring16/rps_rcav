@@ -6,7 +6,7 @@ class GameController < ApplicationController
       @result = "Tie"
     elsif @computer_move == "paper"
       @result = "Lose"
-    else @computer_move == "scissors"
+    elsif @computer_move == "scissors"
       @result = "Win"
     end
     render("rock.html.erb")
@@ -19,7 +19,7 @@ class GameController < ApplicationController
       @result = "Win"
     elsif @computer_move == "paper"
       @result = "Tie"
-    else @computer_move == "scissors"
+    elsif @computer_move == "scissors"
       @result = "Lose"
     end
     render("paper.html.erb")
@@ -32,7 +32,7 @@ class GameController < ApplicationController
       @result = "Lose"
     elsif @computer_move == "paper"
       @result = "Win"
-    else @computer_move == "scissors"
+    elsif @computer_move == "scissors"
       @result = "Tie"
     end
     render("scissors.html.erb")

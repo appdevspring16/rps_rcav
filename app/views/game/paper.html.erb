@@ -1,4 +1,4 @@
-<h1>Welcome</h1>
+<!-- <h1>Welcome</h1>
 
 <h2>You played paper</h2>
 
@@ -9,4 +9,52 @@
 <h2>Congrats! You WON!!!!</h2>
 <% else %>
 <h2> So sory, you lost. </h2>
-<%end%>
+<%end%> -->
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-2 col-xs-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          Paper
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="/assets/images/paper.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-xs-6">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h2 class="panel-title text-center">
+          <%= @computer_move.capitalize %>
+        </h2>
+      </div>
+      <div class="panel-body">
+        <img class="img-responsive" src="/assets/images/<%= @computer_move %>.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="well text-center">
+      <h1>
+        <% if @result == "Win" %>
+          <% label_type = "success" %>
+        <% elsif @result == "Lose" %>
+          <% label_type = "danger" %>
+        <% elsif @result == "Tie" %>
+          <% label_type = "warning" %>
+        <% end %>
+
+        <span class="label label-<%= label_type %>">
+          You <%= @result %>!
+        </span>
+      </h1>
+    </div>
+  </div>
+</div>
