@@ -1,16 +1,3 @@
-<!-- <h1>Welcome</h1>
-
-<h2>You played scissors</h2>
-
-<h2>The computer played <%= @computer_move %> </h2>
-<% if @result == "Tie" %>
-<h2>Ah, we tied </h2>
-<% elsif @result == "Win" %>
-<h2>Congrats! You WON!!!!</h2>
-<% else %>
-<h2> So sory, you lost. </h2>
-<%end%> -->
-
 <div class="row">
   <div class="col-md-4 col-md-offset-2 col-xs-6">
     <div class="panel panel-success">
@@ -44,11 +31,11 @@
     <div class="well text-center">
       <h1>
         <% if @result == "Win" %>
-          <% label_type = "success" %>
+        <% label_type = "success" %>
         <% elsif @result == "Lose" %>
-          <% label_type = "danger" %>
+        <% label_type = "danger" %>
         <% elsif @result == "Tie" %>
-          <% label_type = "warning" %>
+        <% label_type = "warning" %>
         <% end %>
 
         <span class="label label-<%= label_type %>">
